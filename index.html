@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link
+			rel="stylesheet"
+			href="output.css"
+		/>
+		<title>Frontend Mentor | Article preview component</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<main class="min-h-screen grid place-content-center px-6">
+			<article
+				class="relative flex flex-col lg:flex-row bg-white max-w-[340px] lg:max-w-[750px] mx-auto rounded-lg shadow-md shadow-gray-blue-2/30 overflow-hidden lg:overflow-visible"
+			>
+				<h1 class="sr-only">article preview component</h1>
+				<div
+					class="bg-[url(images/drawers.jpg)] bg-size-[100%] lg:bg-size-[126%] bg-position-[50%_30%] lg:bg-position-[5%_30%] bg-no-repeat min-h-52 lg:min-h-full lg:min-w-[40%] lg:rounded-tl-lg lg:rounded-bl-lg"
+				></div>
+				<div class="pt-9 lg:py-8 px-8 lg:px-10 lg:flex-1">
+					<h2 class="font-bold text-base text-gray-blue-3 lg:text-xl">
+						Shift the overall look and feel by adding these wonderful touches
+						to furniture in your home
+					</h2>
+					<p class="text-gray-blue-3/70 mt-4">
+						Ever been in a room and felt like something was missing? Perhaps it
+						felt slightly bare and uninviting. I’ve got some simple tips to
+						help you make any room feel complete.
+					</p>
+					<article class="flex items-center justify-between pb-3 lg:pb-0 mt-8">
+						<div class="flex gap-4 items-center">
+							<img
+								class="w-10 rounded-full"
+								src="images/avatar-michelle.jpg"
+								alt="a picture of michelle"
+							/>
+							<div>
+								<h3 class="text-gray-blue-3 font-medium">Michelle Appleton</h3>
+								<span class="text-gray-blue-2/80">28 Jun 2020</span>
+							</div>
+						</div>
+						<button
+							id="toggle-share-menu"
+							aria-haspopup="true"
+							aria-controls="share-menu-desktop share-menu-mobile"
+							aria-label="show share menu"
+							data-state="closed"
+							class="relative z-10 bg-gray-blue-1 w-8 aspect-square grid place-content-center ml-auto rounded-full cursor-pointer text-dark-blue transition ease-in-out hover:text-gray-blue-1 hover:bg-dark-blue data-[state=open]:bg-dark-blue data-[state=open]:text-gray-blue-1"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="15"
+								height="13"
+							>
+								<path
+									fill="currentColor"
+									d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+								/>
+							</svg>
+							<!-- share menu desktop -->
+							<div
+								id="share-menu-desktop"
+								role="menu"
+								aria-hidden="true"
+								class="absolute bg-gray-blue-3 -top-24 left-1/2 min-w-[250px] -translate-x-1/2 items-center gap-5 justify-center py-5 rounded-lg shadow-lg shadow-gray-blue-2/80 hidden lg:flex pointer-events-none invisible"
+							>
+								<h3 class="uppercase tracking-[0.5ch] text-gray-blue-1/50">
+									share
+								</h3>
+								<ul class="flex items-center gap-4">
+									<li role="presentation">
+										<a
+											href=""
+											role="menuitem"
+											aria-lable="share to facebook"
+											class="pointer-events-auto"
+										>
+											<img
+												src="images/icon-facebook.svg"
+												alt="facebook icon"
+											/>
+										</a>
+									</li>
+									<li role="presentation">
+										<a
+											href=""
+											role="menuitem"
+											aria-lable="share to twitter"
+											class="pointer-events-auto"
+										>
+											<img
+												src="images/icon-twitter.svg"
+												alt="twitter icon"
+											/>
+										</a>
+									</li>
+									<li role="presentation">
+										<a
+											href=""
+											role="menuitem"
+											aria-lable="share to pinterest"
+											class="pointer-events-auto"
+										>
+											<img
+												src="images/icon-pinterest.svg"
+												alt="pinterest icon"
+											/>
+										</a>
+									</li>
+								</ul>
+								<!-- arrow shape -->
+								<div
+									class="absolute border-transparent border-t-gray-blue-3 border-13 top-full left-1/2 -translate-x-1/2"
+								></div>
+							</div>
+						</button>
+					</article>
+				</div>
+				<!-- share-menu mobile -->
+				<div
+					id="share-menu-mobile"
+					role="menu"
+					aria-hidden="true"
+					class="absolute bg-gray-blue-3 inset-x-0 bottom-0 flex lg:hidden items-center gap-5 px-8 py-6 invisible"
+				>
+					<h3 class="uppercase tracking-[0.5ch] text-gray-blue-1/50">share</h3>
+					<div class="flex items-center gap-4">
+						<ul class="flex items-center gap-4">
+							<li role="presentation">
+								<a
+									href=""
+									role="menuitem"
+									aria-lable="share to facebook"
+								>
+									<img
+										src="images/icon-facebook.svg"
+										alt="facebook icon"
+									/>
+								</a>
+							</li>
+							<li role="presentation">
+								<a
+									href=""
+									role="menuitem"
+									aria-lable="share to twitter"
+								>
+									<img
+										src="images/icon-twitter.svg"
+										alt="twitter icon"
+									/>
+								</a>
+							</li>
+							<li role="presentation">
+								<a
+									href=""
+									role="menuitem"
+									aria-lable="share to pinterest"
+								>
+									<img
+										src="images/icon-pinterest.svg"
+										alt="pinterest icon"
+									/>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</article>
+		</main>
+
+		<div class="attribution">
+			Challenge by
+			<a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank"
+				>Frontend Mentor</a
+			>. Coded by
+			<a href="https://github.com/mohamedmostafakhudari">CyberFrost</a>.
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
